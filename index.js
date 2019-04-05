@@ -1,25 +1,21 @@
-import { TweenMax, TimelineMax } from "gsap"
+import { TweenMax } from "gsap"
 
-const divs = Array.from({ length: 100 }, () =>
-  document.createElement("div")
-);
+const box = document.createElement("div");
+box.setAttribute("class", "box");
+document.body.appendChild(box);
 
-divs.forEach(div => {
-  TweenMax.set(div, {
-    position: "absolute",
-    x: `${Math.random() * window.innerWidth}px`,
-    y: `${Math.random() * window.innerHeight}px`,
-    width: 20,
-    height: 20,
-    backgroundColor: "green",
-    border: "3px solid black"
-  });
-
-  document.body.appendChild(div)
+box.addEventListener("mouseover", () => {
+  TweenMax.to(box, .25, { className: "+=hover" });
 });
 
-TweenMax.to(divs, 10, { x: 100, y: 100 });
+box.addEventListener("mouseout", () => {
+  TweenMax.to(box, .25, { className: "-=hover" });
+});
 
-document.addEventListener("click", event => {
-  TweenMax.killAll();
+box.addEventListener("mousedown", () => {
+  TweenMax.to(box, .25, { className: "+=down" });
+});
+
+box.addEventListener("mouseup", () => {
+  TweenMax.to(box, .25, { className: "-=down" });
 });

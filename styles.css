@@ -1,3 +1,17 @@
 body {
   margin: 0;
 }
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.hover {
+  box-shadow: 0 1rem 1rem;
+}
+
+.down {
+  background-color: blue;
+}
