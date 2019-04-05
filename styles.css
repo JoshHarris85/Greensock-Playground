@@ -1,15 +1,14 @@
 body {
   display: flex;
   height: 50vh;
-  flex-wrap: wrap;
-  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 .box {
   width: 100px;
   height: 100px;
   background-color: red;
-  border: 5px solid black;
 }
 
 .hover {
