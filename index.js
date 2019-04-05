@@ -24,3 +24,11 @@ document.querySelector("#box").addEventListener("click", () => {
     timeline.resume();
   }
 });
+
+document.addEventListener("wheel", (event) => {
+  if (event.wheelDelta > 0) {
+    TweenMax.to(timeline, 0.25, { progress: "+=0.1" })
+  } else {
+    TweenMax.to(timeline, 0.25, { progress: "-=0.1" })
+  }
+});
