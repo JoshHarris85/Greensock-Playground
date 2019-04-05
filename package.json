@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "dev": "parcel index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  },
+  "dependencies": {
+    "gsap": "^2.1.2"
+  }
+}
