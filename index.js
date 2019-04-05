@@ -1,3 +1,9 @@
-import { TweenMax } from 'gsap';
+import { TweenMax } from "gsap"
 
-TweenMax.to("h1", 1, { x: 100 });
+TweenMax.set("#box", { xPercent: -50, yPercent: -50 })
+
+document.addEventListener("click", event => {
+  const { clientX, clientY } = event
+
+  TweenMax.to("#box", 1, { x: clientX, y: clientY })
+})
